@@ -1,0 +1,231 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family:sans-serif;
+}
+body{
+  background-color: #ffffff;
+}
+.notification-box{
+  padding: 20px;
+  background-color: #ffffff;
+  width: 40%;
+}
+.notification-box textarea{
+  width: 100%;
+  height: 100px;
+  border: 1px solid #4f4f4f;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+.popup-con{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #02040faf;
+  z-index: 10;
+}
+.loader-con{
+  height: 70px;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.loader{
+  animation: load 600ms ease-in-out infinite;
+}
+@keyframes load {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+/*navbar layout*/
+nav{
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+  color: #4f4f4f;
+}
+nav >div{
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.third-nav{
+  justify-content: flex-end;
+}
+.nav-right{
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  gap: 50px;
+}
+.nav-con{
+  display: flex;
+  width: 90%;
+  max-width: 1200px;
+  height: 100%;
+  justify-content: space-between;
+  color: #cac8c8;
+  align-items: flex-end;
+}
+.nav-con ul{
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  cursor: pointer;
+}
+.nav-con button{
+  width: 100px;
+  border: 1px solid #509cdb;
+  background-color: #509cdb;
+  color: white ;
+  padding: 10px;
+  border-radius: 5px ;
+  margin-top: 3px;
+}
+
+/*Dashboard layout*/
+.dashboard-con{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+}
+.dashboard-content{
+  width: 80%;
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+.dashboard-con::-webkit-scrollbar-track{
+ border-radius: 15px;
+ background-color: #cac8c8;
+ border: 1px solid #4f4f4f;
+}
+.dashboard-con::-webkit-scrollbar{
+  background-color: transparent;
+}
+
+/*dashboad sidebar*/
+.sidebar{
+  background-color: #152259;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  color: #ffffff;
+}
+.sidebar header{
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #5f6fb8;
+  width: 100%;
+  font-size: 13px;
+}
+.sidebar header span{
+  position: relative;
+  height: 75px;
+  width: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: goldenrod;
+  border-radius: 50%;
+  font-weight: 100;
+  font-size: 25px;
+}
+.sidebar header span img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.sidebar header span small{
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  background-color: #cac8c8;
+  color: #152259;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+}
+.sidebar ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.active{
+  color: #ffffff;
+  background-color: #509cdb;
+  text-decoration: none;
+  font-size: 14px;
+}
+.domant{
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+}
+#navlink{
+  width: 80%;
+  padding: 12px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 600ms;
+}
+.btn{
+background-color: #509cdb;
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  border: 1px solid #509cdb;
+  width: 120px;
+  transition: all 600ms;
+}
+.btn:hover {
+  background-color: transparent;
+  color: #509cdb;
+}
+.btn2{
+  background-color: #ffffff;
+    color: #509cdb;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid #509cdb;
+    width: 120px;
+    transition: all 600ms;
+  }
+  .btn2:hover {
+    background-color: #509cdb;
+    color: #ffffff;
+  }

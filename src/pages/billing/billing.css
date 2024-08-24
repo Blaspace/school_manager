@@ -1,0 +1,190 @@
+/** @format */
+.popup {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  width: 350px;
+}
+.popup input{
+  width: 100%;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid #4f4f4f;
+  padding: 5px;
+  border-radius: 5px;
+}
+.popup button{
+ margin: 5px;
+ border-radius: 10px;
+}
+header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+  }
+  header > div {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    color: #4f4f4f;
+  }
+  header > div button {
+    background-color: #509cdb;
+    color: #ffffff;
+    font-weight: 550;
+    font-size: 16;
+    padding: 10px;
+    border: 1px solid #509cdb;
+    border-radius: 5px;
+  }
+  header > div div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  header b {
+    color: #509cdb;
+  }
+  .teacher {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /*new student*/
+  .new-student {
+    background-color: #ffffff;
+    color: #4f4f4f;
+    padding: 50px;
+    width: 60%;
+  }
+  .new-student header select{
+    width: 200px;
+  }
+  .new-student div{
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+  }
+  .new-student section{
+      display: flex;
+      gap: 10px;
+      width: 100%;
+  }
+  .new-student section div{
+    width: 100%;
+  }
+  .new-student input{
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid #a7a7a7;
+    border-radius: 3px;
+  }
+  .new-student label{
+    color: #8a8a8a;
+  }
+  .new-student span{
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    align-items: center;
+  }
+  .new-student select{
+    height: 40px;
+    width: 50%;
+    padding: 5px;
+    border: 1px solid #a7a7a7;
+    border-radius: 3px;
+  }
+  .new-student section option{
+    padding: 10px;
+    height: 40px;
+  }
+  .new-student button{
+    background-color: #509cdb;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid #509cdb;
+    width: 120px;
+    transition: all 600ms;
+  }
+  .new-student button:hover{
+    background-color: transparent;
+    color: #509cdb;
+  }
+  
+  .payment-history{
+    display: flex;
+    flex-direction: column;
+  }
+  .payment-history ul{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    list-style: none;
+    font-size: 13px;
+  }
+  .payment-history li{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 20%;
+    text-align: start;
+  }
+
+  .billing{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .billing-con{
+    width: 90%;
+    display: flex;
+    gap: 10px;
+    height: 300px;
+  }
+  .billing section{
+    width: 50%;
+    height: 100%;
+    background-color: #fcfafa;
+    padding: 5px;
+    overflow-y:scroll;
+  }
+  .all-billing{
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    max-height: 100%;
+  }
+  .all-billing div{
+    color: #4f4f4f;
+    font-size: 13px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 49%;
+    padding: 10px;
+  }
+  .all-billing div section{
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+  }
+  .all-billing-header{
+    color: #4f4f4f;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 5px;
+  }
