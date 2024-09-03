@@ -5,20 +5,19 @@ import { FaUsers, FaMoneyBill, FaChalkboardTeacher } from "react-icons/fa";
 import SchoolContext from "../../context/SchoolContext";
 
 function DashboardHeader() {
-  const {student, teacher, billing} = useContext(SchoolContext)
   return (
     <div className="dashboard-header">
       <div>
         <FaChalkboardTeacher size={50} />
-        <p>You have added:<br/> {teacher?.length} teacher</p>
+        <p>Add teachers to your school</p>
       </div>
       <div>
         <FaUsers size={50} />
-        <p>You have added:<br/> {student?.length} students</p>
+        <p>Added students to your school</p>
       </div>
       <div>
         <FaMoneyBill size={50} />
-        <p>You have:<br/> {billing?.length} new payments</p>
+        <p>Add your custom billing</p>
       </div>
     </div>
   );

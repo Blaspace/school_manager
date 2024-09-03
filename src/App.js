@@ -1,6 +1,6 @@
 /** @format */
 
-import React from "react";
+import React, {useEffect} from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
 import SignUp from "./pages/signup/SignUp";
@@ -42,8 +42,11 @@ import GetTeacherSchool from "./RouteComponent/GetTeacherSchool";
 import GetTeacherNotification from "./RouteComponent/GetTeacherNotification";
 import GetTeacherResult from "./RouteComponent/GetTeacherResult";
 import GetStudentResult from "./RouteComponent/GetStudentResult";
+import GetTeacherMaterial from "./RouteComponent/GetTeacherMaterials";
+import GetStudentMaterial from "./RouteComponent/GetStudentMaterial";
 
 function App() {
+  
   return (
     <Routes>
       <Route index element={<Home />} />
@@ -80,17 +83,19 @@ function App() {
                   />
                 </Route>
               </Route>
+              <Route element={<GetStudentMaterial/>}>
               <Route
                 path="student/dashboard/materials"
                 element={<StudentMaterials />}
               />
-                <Route element={<GetStudentTeacher />}>
-                <Route element={<GetStudentResult />}>
-              <Route
-                path="student/dashboard/result"
-                element={<StudentResult />}
-              />
               </Route>
+              <Route element={<GetStudentTeacher />}>
+                <Route element={<GetStudentResult />}>
+                  <Route
+                    path="student/dashboard/result"
+                    element={<StudentResult />}
+                  />
+                </Route>
               </Route>
             </Route>
           </Route>
@@ -107,12 +112,12 @@ function App() {
               />
             </Route>
             <Route element={<GetTeacherStudent />}>
-            <Route element={<GetTeacherResult />}>
-            <Route
-              path="/teacher/dashboard/result"
-              element={<TeacherResult />}
-            />
-            </Route>
+              <Route element={<GetTeacherResult />}>
+                <Route
+                  path="/teacher/dashboard/result"
+                  element={<TeacherResult />}
+                />
+              </Route>
             </Route>
             <Route element={<GetTeacherNotification />}>
               <Route
@@ -120,10 +125,12 @@ function App() {
                 element={<TeacherNotification />}
               />
             </Route>
+            <Route element={<GetTeacherMaterial/>}>
             <Route
               path="/teacher/dashboard/material"
               element={<TeacherMaterials />}
             />
+            </Route>
           </Route>
         </Route>
         <Route element={<GetSchool />}>
@@ -131,13 +138,7 @@ function App() {
             <Route element={<GetBilling />}>
               <Route path="/billing" element={<Billing />} />
             </Route>
-            <Route element={<GetBilling />}>
-              <Route element={<GetTeacher />}>
-                <Route element={<GetStudent />}>
-                  <Route path="/dashboard" element={<Dashboard />} />
-                </Route>
-              </Route>
-            </Route>
+            <Route path="/dashboard" element={<Dashboard />} />
             {/*route for getting current school teachers and setting it to state*/}
             <Route element={<GetTeacher />}>
               <Route path="/teachers" element={<Teachers />} />

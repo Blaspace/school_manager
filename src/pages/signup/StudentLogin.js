@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
+import LoginPop from "./LoginPop";
 
 const StudentLogin = ()=>{
     const [password, setPassword] = useState()
     const [email, setEmail] = useState()
+    const [pop,setPop] = useState(true)
     const navigate = useNavigate()
     const handleLogin =(e)=>{
         e.target.innerText = "Loading..."
@@ -37,9 +39,45 @@ const StudentLogin = ()=>{
             e.target.style.color = "#ffffff"
         })
     }
+    const handleDemo = (login,e)=>{
+        e.target.innerText = "Loading..."
+        e.target.style.backgroundColor = "lightgrey"
+        e.target.style.color = "black"
+        fetch(`${process.env.REACT_APP_APIURL}/student/login`,{
+            method: 'POST',
+            headers: {
+                'Content-Type':'application/json'
+            },
+            body: JSON.stringify(login)
+        })
+        .then(res=> {
+            if(res.ok){
+                return res.json()
+            }else if(res.status === 401){
+                alert('Wrong email/password')
+            }else{
+                alert('please try again')
+            }
+        })
+        .then(data=>{
+            localStorage.setItem('token', data.accessToken)
+            localStorage.setItem('user', 'student')
+            navigate('../../studentdashboard')
+        })
+        .catch(err=>console.log(err))
+        .finally(()=>{
+            e.target.innerText = "Login"
+            e.target.style.backgroundColor = "#2d88d4"
+            e.target.style.color = "#ffffff"
+        })
+    }
     return (
+        <>
+        <LoginPop pop={pop} setPop={setPop} func={handleDemo}/>
         <div className="signup">
+            
            <div className="signup-right">
+            
         <h1>Welcome, login to the student's portal</h1>
         <br/>
         <br/>
@@ -77,6 +115,7 @@ const StudentLogin = ()=>{
         <div className="signup-left">
         </div>
         </div>
+        </>
     )
 }
 

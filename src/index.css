@@ -1,18 +1,20 @@
-*{
+/** @format */
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family:sans-serif;
+  font-family: sans-serif;
 }
-body{
+body {
   background-color: #ffffff;
 }
-.notification-box{
+.notification-box {
   padding: 20px;
   background-color: #ffffff;
-  width: 40%;
+  width: 90%;
 }
-.notification-box textarea{
+.notification-box textarea {
   width: 100%;
   height: 100px;
   border: 1px solid #4f4f4f;
@@ -20,7 +22,7 @@ body{
   padding: 10px;
   font-size: 16px;
 }
-.popup-con{
+.popup-con {
   position: fixed;
   top: 0;
   left: 0;
@@ -32,7 +34,7 @@ body{
   background-color: #02040faf;
   z-index: 10;
 }
-.loader-con{
+.loader-con {
   height: 70px;
   width: 70px;
   display: flex;
@@ -41,42 +43,46 @@ body{
   background-color: #ffffff;
   border-radius: 10px;
 }
-.loader{
+.loader {
   animation: load 600ms ease-in-out infinite;
 }
 @keyframes load {
-  0%{
+  0% {
     transform: rotate(0deg);
   }
-  100%{
+  100% {
     transform: rotate(360deg);
   }
 }
 
 /*navbar layout*/
-nav{
+nav {
   display: flex;
   justify-content: center;
   height: 50px;
   width: 100%;
   color: #4f4f4f;
 }
-nav >div{
+nav > div {
   width: 90%;
   height: 100%;
   display: flex;
   align-items: center;
 }
-.third-nav{
-  justify-content: flex-end;
+.third-nav {
+  justify-content: space-between;
 }
-.nav-right{
+.third-nav span {
+  font-size: 30px;
+  display: block;
+}
+.nav-right {
   display: flex;
   align-items: center;
   justify-self: end;
   gap: 50px;
 }
-.nav-con{
+.nav-con {
   display: flex;
   width: 90%;
   max-width: 1200px;
@@ -85,54 +91,66 @@ nav >div{
   color: #cac8c8;
   align-items: flex-end;
 }
-.nav-con ul{
-  display: flex;
+.nav-con ul {
+  display: none;
   gap: 30px;
   list-style: none;
   cursor: pointer;
 }
-.nav-con button{
+.nav-con button {
   width: 100px;
   border: 1px solid #509cdb;
   background-color: #509cdb;
-  color: white ;
+  color: white;
   padding: 10px;
-  border-radius: 5px ;
+  border-radius: 5px;
   margin-top: 3px;
 }
-
+/*Dropdown*/
+.drop-down{
+  background-color: #152259;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 0;
+  transition: all 600ms;
+  overflow-y: hidden;
+  z-index: 5;
+}
 /*Dashboard layout*/
-.dashboard-con{
+.dashboard-con {
   height: 100vh;
   width: 100%;
   display: flex;
   justify-content: stretch;
   align-items: stretch;
 }
-.dashboard-content{
-  width: 80%;
+.dashboard-content {
+  width: 100%;
   max-height: 100vh;
   overflow-y: scroll;
 }
-.dashboard-con::-webkit-scrollbar-track{
- border-radius: 15px;
- background-color: #cac8c8;
- border: 1px solid #4f4f4f;
+.dashboard-con::-webkit-scrollbar-track {
+  border-radius: 15px;
+  background-color: #cac8c8;
+  border: 1px solid #4f4f4f;
 }
-.dashboard-con::-webkit-scrollbar{
+.dashboard-con::-webkit-scrollbar {
   background-color: transparent;
 }
 
 /*dashboad sidebar*/
-.sidebar{
+.sidebar {
   background-color: #152259;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   width: 20%;
   color: #ffffff;
+  display: none;
 }
-.sidebar header{
+.sidebar header {
   height: 170px;
   display: flex;
   flex-direction: column;
@@ -142,7 +160,7 @@ nav >div{
   width: 100%;
   font-size: 13px;
 }
-.sidebar header span{
+.sidebar header span {
   position: relative;
   height: 75px;
   width: 75px;
@@ -154,13 +172,17 @@ nav >div{
   font-weight: 100;
   font-size: 25px;
 }
-.sidebar header span img{
+.sidebar header span input {
+  opacity: 0;
+  position: absolute;
+}
+.sidebar header span img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
 }
-.sidebar header span small{
+.sidebar header span small {
   position: absolute;
   height: 30px;
   width: 30px;
@@ -181,18 +203,18 @@ nav >div{
   flex-direction: column;
   margin-top: 20px;
 }
-.active{
+.active {
   color: #ffffff;
   background-color: #509cdb;
   text-decoration: none;
   font-size: 14px;
 }
-.domant{
+.domant {
   color: #ffffff;
   text-decoration: none;
   font-size: 14px;
 }
-#navlink{
+#navlink {
   width: 80%;
   padding: 12px;
   border-radius: 5px;
@@ -201,8 +223,8 @@ nav >div{
   gap: 5px;
   transition: all 600ms;
 }
-.btn{
-background-color: #509cdb;
+.btn {
+  background-color: #509cdb;
   color: #ffffff;
   padding: 10px;
   border: none;
@@ -215,17 +237,37 @@ background-color: #509cdb;
   background-color: transparent;
   color: #509cdb;
 }
-.btn2{
+.btn2 {
   background-color: #ffffff;
-    color: #509cdb;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    border: 1px solid #509cdb;
-    width: 120px;
-    transition: all 600ms;
+  color: #509cdb;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  border: 1px solid #509cdb;
+  width: 120px;
+  transition: all 600ms;
+}
+.btn2:hover {
+  background-color: #509cdb;
+  color: #ffffff;
+}
+@media (min-width: 780px) {
+  .nav-con ul {
+    display: flex;
   }
-  .btn2:hover {
-    background-color: #509cdb;
-    color: #ffffff;
+  .sidebar {
+    display: flex;
   }
+  .dashboard-content {
+    width: 80%;
+  }
+  .third-nav {
+    justify-content: flex-end;
+  }
+  .third-nav span {
+    display: none;
+  }
+  .notification-box{
+    width: 40%;
+  }
+}

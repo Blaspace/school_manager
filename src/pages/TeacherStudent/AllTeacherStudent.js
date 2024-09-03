@@ -1,21 +1,31 @@
 /** @format */
 
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import TeacherContext from "../../context/TeacherContext";
 import NoStudent from "./NoStudent";
 import SingleStudent from "./SingleStudent";
 import NotificationBox from "./NotificationBox";
-import Loading from '../../components/Loading'
+import Loading from "../../components/Loading";
 
-function AllStudent() {
+function AllStudent({ search }) {
   const { student } = useContext(TeacherContext);
   const [studentId, setStudentId] = useState(null);
   const [studentNotificationId, setStudentNotificationId] = useState(null);
-  const [loading, setLoading] = useState(false)
-
+  const [loading, setLoading] = useState(false);
+  const [filteredStudent, setFilteredStudent] = useState([]);
+  useEffect(() => {
+    if (search) {
+      const i = student.filter((v) =>
+        v?.studentName?.toUpperCase().includes(search.toUpperCase())
+      );
+      setFilteredStudent(i);
+    } else {
+      setFilteredStudent(student);
+    }
+  }, [search, student]);
   const handleSendNotification = (id, message) => {
-    setStudentNotificationId(null)
-    setLoading(true)
+    setStudentNotificationId(null);
+    setLoading(true);
     fetch(`${process.env.REACT_APP_APIURL}/teacher/notify/${id}`, {
       method: "POST",
       headers: {
@@ -29,12 +39,12 @@ function AllStudent() {
     })
       .then((res) => res.json())
       .then((data) => alert("Your message has been sent"))
-      .finally(()=>setLoading(false))
+      .finally(() => setLoading(false));
   };
 
   return (
     <>
-    <Loading loading={loading} setLoading={setLoading}/>
+      <Loading loading={loading} setLoading={setLoading} />
       <SingleStudent
         studentId={studentId}
         setStudentId={setStudentId}
@@ -45,30 +55,34 @@ function AllStudent() {
         setUserId={setStudentNotificationId}
         func={handleSendNotification}
       />
-      {student?.length ? (
+      {filteredStudent?.length ? (
         <div className="all-teacher">
-          <ul style={{ backgroundColor: "#ffffff", fontWeight: "550" }}>
+          <ul
+            style={{ backgroundColor: "#ffffff", fontWeight: "550" }}
+            className="list-head"
+          >
             <li>Student Name</li>
             <li>Student ID</li>
             <li>Email address</li>
             <li>Class</li>
             <li>Gender</li>
           </ul>
-          {student?.map((value, i) => {
+          {filteredStudent?.map((value, i) => {
             return (
               <ul
                 key={i}
                 style={{ backgroundColor: i % 2 === 0 ? "#e9f2fa" : "#ffffff" }}
                 onClick={() => setStudentId(value?._id)}
+                className="list-item"
               >
-                <li>
+                <li data-name="Student Name">
                   <span>{value?.studentName?.slice(0, 1).toUpperCase()}</span>{" "}
                   {value?.studentName}
                 </li>
-                <li>{value?.studentId}</li>
-                <li>{value?.studentEmail}</li>
-                <li>{value?.studentClass}</li>
-                <li>{value?.studentGender}</li>
+                <li data-name="Student ID">{value?.studentId}</li>
+                <li data-name="Email address">{value?.studentEmail}</li>
+                <li data-name="Class">{value?.studentClass}</li>
+                <li data-name="Gender">{value?.studentGender}</li>
               </ul>
             );
           })}

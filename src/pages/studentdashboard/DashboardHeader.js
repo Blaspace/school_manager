@@ -7,9 +7,8 @@ import { GrDocument } from "react-icons/gr";
 
 function DashboardHeader() {
   const {student, teacher, billing} = useContext(SchoolContext)
-  return (
-    <div className="dashboard-header">
-        
+  return ( 
+    <div  className="dashboard-header">
       <div>
         <FaChalkboardTeacher size={50} />
         <p>Check your result</p>
@@ -22,7 +21,7 @@ function DashboardHeader() {
         <FaMoneyBill size={50} />
         <p>Make payments</p>
       </div>
-    </div>
+      </div>
   );
 }
 

@@ -1,73 +1,102 @@
-.signup{
-    display: flex;
-    justify-content: stretch;
-    align-items: stretch;
-    height: 100vh;
-    width: 100%;
+/** @format */
+
+.signup {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  height: 100vh;
+  width: 100%;
+}
+.signup div {
+  height: 100%;
+  width: 100%;
+}
+.signup-left {
+  background-color: rgb(165, 162, 162);
+  width: 50%;
+  background-image: url("../../public/signup.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  display: none;
+}
+.signup-right {
+  background-color: #fcfafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #4f4f4f;
+  text-align: center;
+  width: 100%;
+}
+.signup-right form {
+  background-color: #ffffff;
+  max-width: 800px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.signup-right form section {
+  display: flex;
+  background-color: #fcfafa;
+}
+.activel {
+  background-color: #2d88d4;
+  color: #ffffff;
+  text-decoration: none;
+}
+.domantl {
+  background-color: transparent;
+  color: #4f4f4f;
+  text-decoration: none;
+}
+.signup-right form p {
+  font-size: 16px;
+  text-align: center;
+  color: #a7a7a7;
+}
+.signup-right input {
+  height: 50px;
+  border: 1px solid #c4c4c4;
+  width: 70%;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 10px;
+}
+.signup-right button {
+  height: 50px;
+  width: 70%;
+  color: #ffffff;
+  background-color: #2d88d4;
+  border: none;
+  border-radius: 10px;
+  font-weight: 550;
+  font-size: 16px;
+}
+.demo{
+  width: 90%;
+  background-color: #ffffff;
+  color: #4f4f4f;
+  padding: 15px;
+}
+.demo div{
+  display: flex;
+  gap: 10px;
+}
+@media (min-width: 780px) {
+  .signup-left {
+    display: block;
   }
-  .signup div{
-    height: 100%;
-    width: 100%;
-  }
-  .signup-left{
-    background-color: rgb(165, 162, 162);
+  .signup-right {
     width: 50%;
-    background-image: url('../../public/signup.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-blend-mode: multiply;
   }
-  .signup-right{
-    background-color: #fcfafa;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: #4f4f4f;
-  }
-  .signup-right form{
-    background-color: #ffffff;
-    max-width: 800px;
+  .signup-right form {
     width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
   }
-  .signup-right form section{
-    display: flex;
-     background-color: #fcfafa;
+  .demo{
+    width:40%;
   }
-  .activel{
-    background-color: #2d88d4;
-    color: #ffffff;
-    text-decoration: none;
-  }
-  .domantl{
-    background-color: transparent;
-    color: #4f4f4f;
-    text-decoration: none;
-  }
-  .signup-right form p{
-    font-size: 16px;
-    text-align: center;
-   color: #a7a7a7;
-  }
-  .signup-right input{
-    height: 50px;
-    border: 1px solid #c4c4c4;
-    width: 70%;
-    font-size: 16px;
-    padding: 5px;
-    border-radius: 10px;
-  }
-  .signup-right button{
-    height: 50px;
-    width: 70%;
-    color:#ffffff;
-    background-color: #2d88d4;
-    border: none;
-    border-radius: 10px;
-    font-weight: 550;
-    font-size: 16px;
-  }
+}

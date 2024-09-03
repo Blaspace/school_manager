@@ -8,6 +8,7 @@ export const StudentProvider = ({ children }) => {
   const [teacher, setTeacher] = useState([]);
   const [billing, setBilling] = useState([]);
   const [school, setSchool] = useState();
+  const [material, setMaterial] = useState([])
   const [notification, setNotification] = useState([]);
   const [result, setResult] = useState([]);
 
@@ -25,7 +26,7 @@ export const StudentProvider = ({ children }) => {
         notification,
         setNotification,
         result,
-        setResult,
+        setResult,material, setMaterial,
       }}
     >
       {children}

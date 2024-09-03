@@ -7,6 +7,7 @@ function AllStudentResult({ setStudentId }) {
   const { student, result } = useContext(TeacherContext);
   return (
     <div className="all-result">
+      <div>
       <table>
         <ul>
           <li style={{ maxWidth: "50px", minWidth: "50px" }}>
@@ -41,7 +42,7 @@ function AllStudentResult({ setStudentId }) {
               <li style={{ maxWidth: "50px", minWidth: "50px" }}>
                 {index + 1}
               </li>
-              <li>{value?.studentName}</li>
+              <li style={{justifyContent:'flex-start'}}>{value?.studentName}</li>
               <li style={{ maxWidth: "100px", minWidth: "100px" }}>
                 {!r?.length ? "--" : r[0]?.firstCA}
               </li>
@@ -62,14 +63,14 @@ function AllStudentResult({ setStudentId }) {
               <li style={{ maxWidth: "200px", minWidth: "200px" }}>
                 <button
                   className="btn"
-                  style={{ width: "80px", height: "30px" }}
+                  style={{ width: "80px", height: "30px",padding: 0 }}
                   onClick={() => setStudentId(value?._id)}
                 >
                   Edit
                 </button>
                 <button
                   className="btn2"
-                  style={{ width: "80px", height: "30px" }}
+                  style={{ width: "80px", height: "30px",padding: 0 }}
                 >
                   Clear
                 </button>
@@ -78,6 +79,7 @@ function AllStudentResult({ setStudentId }) {
           );
         })}
       </table>
+      </div>
     </div>
   );
 }

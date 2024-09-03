@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { FiBell } from "react-icons/fi";
 import Loading from "./Loading";
 import { useNavigate } from "react-router-dom";
+import {MdOutlineMenu} from 'react-icons/md'
 
-const ThirdNav =()=>{
+const ThirdNav =({toggle, setToggle})=>{
     const [loading, setLoading] = useState(false)
     const navigate = useNavigate()
     const handleLogout = ()=>{
@@ -23,6 +24,9 @@ const ThirdNav =()=>{
    <nav>
     <Loading loading={loading}/>
         <div className="third-nav">
+            <span onClick={()=>setToggle(!toggle)}>
+            <MdOutlineMenu />
+            </span>
             <div className="nav-right">
                 <FiBell size={20}/>
                 <p style={{cursor:'pointer'}} onClick={handleLogout}>Logout</p>

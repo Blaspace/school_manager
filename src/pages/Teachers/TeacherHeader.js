@@ -6,7 +6,6 @@ function TeacherHeader({setNewTeacher}) {
       <div>
         <p>Teachers</p>
         <div>
-            <p><b>Export CSV</b></p>
             <button onClick={()=>setNewTeacher(true)}>Add Teacher</button>
         </div>
       </div>

@@ -3,13 +3,17 @@
 import React, { useContext, useEffect, useState } from "react";
 import StudentContext from "../../context/StudentContext"
 
-function SingleTeacher({ teacherId, setTeacherId }) {
+function SingleTeacher({ teacherId, setTeacherId, setNotify }) {
   const { teacher } = useContext(StudentContext);
   const [newTeacher, setNewTeacher] = useState([]);
   useEffect(() => {
     const i = teacher?.filter((v) => v._id === teacherId);
     setNewTeacher(i);
   }, [teacherId]);
+  const handleNotify = ()=>{
+    setNotify(newTeacher?._id)
+    setTeacherId(null)
+  }
   return (
     <>
       {teacherId && (
@@ -37,7 +41,7 @@ function SingleTeacher({ teacherId, setTeacherId }) {
             </section>
             </div>
             <div>
-              <button className="btn">Notify</button>
+              <button className="btn" onClick={handleNotify}>Notify</button>
               <button className="btn2" onClick={()=>{setTeacherId(null)}}>Cancil</button>
             </div>
             <br />

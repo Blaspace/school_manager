@@ -1,48 +1,55 @@
 /** @format */
 
 .all-result {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-  .all-result table {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-  }
-  .all-result table,
-  .all-result li {
-    outline: 1px solid #969595;
-    border-collapse: collapse;
-    color: #4f4f4f;
-  }
-  .all-result li {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    gap: 5px;
-    height: 100%;
-    flex-grow: 1;
-  }
-  .all-result ul {
-    width: 100%;
-    height: 50px;
-    list-style: none;
-    display: flex;
-    justify-content: stretch;
-  }
+  display: flex;
+  justify-content: center;
+  width: 100%;
   
-  .add-result {
-    padding: 15px;
-    background-color: #ffffff;
-    color: #4f4f4f;
-  }
-  .add-result div {
-    display: flex;
-  }
-  .add-result input {
-    padding: 10px;
-    border: 1px solid #4f4f4f;
-    border-radius: 10px;
-  }
-  
+}
+.all-result div{
+  width: 90%;
+  overflow-x: scroll;
+}
+.all-result table {
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+}
+.all-result table,
+.all-result li {
+  outline: 1px solid #969595;
+  color: #4f4f4f;
+}
+.all-result li {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 5px;
+  flex-grow: 1;
+  height: 100%;
+  padding: 18px;
+}
+.all-result ul {
+  width: 100%;
+  height: 50px;
+  list-style: none;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+}
+
+.add-result {
+  padding: 15px;
+  background-color: #ffffff;
+  color: #4f4f4f;
+}
+.add-result div {
+  display: flex;
+}
+.add-result input {
+  padding: 10px;
+  border: 1px solid #4f4f4f;
+  border-radius: 10px;
+}
+@media (min-width: 780px) {
+}

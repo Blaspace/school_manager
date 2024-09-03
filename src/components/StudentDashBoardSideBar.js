@@ -12,8 +12,8 @@ const SideBar = ()=>{
     return (
         <div className="sidebar">
             <header>
-                <span>
-                <img src={ellips} alt="ellips"/>
+                <span  style={school?.logo && {background: 'transparent'}}>
+                {school?.logo ?<img src={school?.logo} alt={school?.schoolName}/>:<img src={ellips} alt="ellips"/>}
                 </span>
                 <br/>
                 <p>{school?.schoolName}</p>

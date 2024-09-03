@@ -38,29 +38,22 @@ header b {
   align-items: center;
   height: 40px;
 }
-.search section {
-  height: 100%;
-  width: 10%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-}
+
 .search div {
   background-color: #fcfafa;
   height: 100%;
-  width: 90%;
+  width: 100%;
   display: flex;
   align-items: center;
   border-radius: 5px;
 }
 .search div span {
-  width: 5%;
+  width: 10%;
   text-align: center;
 }
 .search div input {
   height: 100%;
-  width: 95%;
+  width: 90%;
   padding: 5px;
   background-color: transparent;
   border: none;
@@ -97,7 +90,7 @@ header b {
   background-color: #ffffff;
   color: #4f4f4f;
   padding: 50px;
-  width: 60%;
+  width: 90%;
 }
 .new-student header select{
   width: 200px;
@@ -163,19 +156,30 @@ header b {
 }
 .all-teacher ul{
   padding: 10px;
-  display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
+  flex-direction: column;
   list-style: none;
   font-size: 13px;
 }
 .all-teacher li{
   display: flex;
   align-items: center;
+  width: 100%;
+  justify-content: space-between;
   gap: 5px;
-  width: 20%;
+  padding: 5px;
   text-align: start;
+}
+.list-item{
+  display: flex;
+}
+.list-head{
+  display: none;
+}
+.all-teacher li::before{
+  content: attr(data-name);
+  font-weight: 550;
 }
 .all-teacher li span{
   background-color: goldenrod;
@@ -184,7 +188,7 @@ header b {
   height: 35px;
   width: 35px;
   border-radius: 50%;
-  display: flex;
+  display: none;
   font-weight: 550;
   align-items: center;
   justify-content: center;
@@ -212,4 +216,29 @@ header b {
   align-items: center;
   justify-content: center;
   font-size: 30px;
+}
+@media (min-width: 780px) {
+.new-student {
+  width:60%;
+}
+  .all-teacher ul{
+    flex-direction: row;
+  height: 50px;
+  }
+  .all-teacher li{
+  width: 20%;
+  justify-content: flex-start;
+  }
+  .all-teacher li::before{
+    display: none;
+  }
+  .search section {
+    display: flex;
+  }
+.all-teacher li span{
+  display: flex;
+}
+.list-head{
+  display: flex;
+}
 }

@@ -8,7 +8,7 @@ function ThirdSection() {
   return (
     <section className="third-section-con">
       <div className="third-section">
-        <div>
+        <div data-aos='fade-up'data-aos-duration='1500'>
           <h1>
             Work around very
             <br /> talented people.
@@ -25,7 +25,7 @@ function ThirdSection() {
             <img src={img1} alt="img of guy" />
           </span>
         </div>
-        <div>
+        <div data-aos='fade-up'data-aos-duration='2000'>
           <span>
             <img src={img2} alt="image ofstudent" />
           </span>

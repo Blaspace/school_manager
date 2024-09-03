@@ -5,12 +5,15 @@ import BillingHistory from './PaymentHistory'
 import AllBilling from './AllBilling'
 import './billing.css'
 import NewBilling from './NewBilling'
+import SchoolDropdown from '../../components/SchoolDropdown'
 
 function Billing() {
   const [addBilling, setAddBilling] = useState(false)
+  const [toggle, setToggle] = useState(false)
   return (
     <div>
-        <ThirdNav/>
+        <ThirdNav toggle={toggle} setToggle={setToggle}/>
+        <SchoolDropdown toggle={toggle} setToggle={setToggle}/>
         <NewBilling addBilling={addBilling} setAddBilling={setAddBilling}/>
         <br/>
         <BillingHeader setNewBilling={setAddBilling}/>

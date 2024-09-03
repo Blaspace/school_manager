@@ -6,7 +6,6 @@ function BillingHeader({setNewBilling}) {
       <div>
         <p>Billings</p>
         <div>
-            <p><b>Export CSV</b></p>
             <button onClick={()=>setNewBilling(true)}>Add Billing</button>
         </div>
       </div>

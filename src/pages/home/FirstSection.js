@@ -9,7 +9,7 @@ function FirstSection() {
   return (
     <section className="first-section-con">
       <div className="first-section">
-        <div>
+        <div data-aos='fade-up'data-aos-duration='1500'>
           <BsPhone size={40} color="509cdb"/>
           <br/>
           <br />
@@ -22,7 +22,7 @@ function FirstSection() {
             labore optio repellat!
           </p>
         </div>
-        <div>
+        <div data-aos='fade-up'data-aos-duration='1500'>
           <PiFileHtmlLight size={40}  color="509cdb"/>
           <br />
           <br/>
@@ -35,7 +35,7 @@ function FirstSection() {
             labore optio repellat!
           </p>
         </div>
-        <div>
+        <div data-aos='fade-up'data-aos-duration='1500'>
           <FaClock size={40}  color="509cdb"/>
           <br />
           <br/>

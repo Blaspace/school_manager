@@ -17,16 +17,18 @@ const FourthSection = () => {
           top: "0",
           left: "0",
         }}
+         data-aos='zoom-in'data-aos-duration='2000'
       ></span>
       <span
         style={{
           bottom: "200px",
           right: "10px",
         }}
+         data-aos='zoom-in'data-aos-duration='2000'
       ></span>
       <div className="header">
         <div className="fourth-section">
-          <div>
+          <div data-aos='fade-right' data-aos-duration='1500'>
             <h1>
               We are always here
               <br /> for your backup
@@ -41,11 +43,16 @@ const FourthSection = () => {
           </div>
           <ul>
             <li
-              onClick={() =>
-                first.height === "150px"
-                  ? setFirst({ height: 0 })
-                  : setFirst({ height: "150px" })
-              }
+              onClick={() => {
+                if (first.height === "150px") {
+                  setFirst({ height: 0 });
+                } else {
+                  setFirst({ height: "150px" });
+                  setSecond({ height: 0 });
+                  setThid({ height: 0 });
+                  setFourth({ height:0 });
+                }
+              }}
             >
               <span>What are we all about?</span>
               <p style={first}>
@@ -59,11 +66,16 @@ const FourthSection = () => {
               </p>
             </li>
             <li
-              onClick={() =>
-                second.height === "150px"
-                  ? setSecond({ height: 0 })
-                  : setSecond({ height: "150px" })
-              }
+              onClick={() => {
+                if (second.height === "150px") {
+                  setSecond({ height: 0 });
+                } else {
+                  setFirst({ height: 0 });
+                  setSecond({ height: "150px" });
+                  setThid({ height: 0 });
+                  setFourth({ height: 0});
+                }
+              }}
             >
               What is our policy on refund?
               <p style={second}>
@@ -77,11 +89,16 @@ const FourthSection = () => {
               </p>
             </li>
             <li
-              onClick={() =>
-                third.height === "150px"
-                  ? setThid({ height: 0 })
-                  : setThid({ height: "150px" })
-              }
+              onClick={() => {
+                if (third.height === "150px") {
+                  setThid({ height: 0 });
+                } else {
+                  setFirst({ height: 0 });
+                  setSecond({ height: 0 });
+                  setThid({ height: "150px" });
+                  setFourth({ height: 0 });
+                }
+              }}
             >
               Why we stand out?
               <p style={third}>
@@ -96,11 +113,16 @@ const FourthSection = () => {
             </li>
             <li
               style={{ border: "none" }}
-              onClick={() =>
-                fourth.height === "150px"
-                  ? setFourth({ height: 0 })
-                  : setFourth({ height: "150px" })
-              }
+              onClick={() => {
+                if (fourth.height === "150px") {
+                  setFourth({ height: 0 });
+                } else {
+                  setFirst({ height: 0 });
+                  setSecond({ height: 0 });
+                  setThid({ height: 0 });
+                  setFourth({ height: "150px" });
+                }
+              }}
             >
               How can i sponsor this app?
               <p style={fourth}>

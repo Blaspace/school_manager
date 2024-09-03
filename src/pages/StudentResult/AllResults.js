@@ -7,6 +7,7 @@ function AllResult({ setStudentId }) {
   const { teacher, result } = useContext(StudentContext);
   return (
     <div className="all-result">
+      <div>
       <table>
         <ul>
           <li style={{ maxWidth: "50px", minWidth: "50px" }}>
@@ -39,7 +40,7 @@ function AllResult({ setStudentId }) {
               <li style={{ maxWidth: "50px", minWidth: "50px" }}>
                 {index + 1}
               </li>
-              <li>{value?.teacherSubject}</li>
+              <li style={{justifyContent:'flex-start'}}>{value?.teacherSubject}</li>
               <li style={{ maxWidth: "130px", minWidth: "130px" }}>
                 {!r?.length ? "--" : r[0]?.firstCA}
               </li>
@@ -61,6 +62,7 @@ function AllResult({ setStudentId }) {
           );
         })}
       </table>
+      </div>
     </div>
   );
 }

@@ -1,215 +1,243 @@
 /** @format */
 
 header {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 60px;
-  }
-  header > div {
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    color: #4f4f4f;
-  }
-  header > div button {
-    background-color: #509cdb;
-    color: #ffffff;
-    font-weight: 550;
-    font-size: 16;
-    padding: 10px;
-    border: 1px solid #509cdb;
-    border-radius: 5px;
-  }
-  header > div div {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  header b {
-    color: #509cdb;
-  }
-  .search {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-  }
-  .search section {
-    height: 100%;
-    width: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-  }
-  .search div {
-    background-color: #fcfafa;
-    height: 100%;
-    width: 90%;
-    display: flex;
-    align-items: center;
-    border-radius: 5px;
-  }
-  .search div span {
-    width: 5%;
-    text-align: center;
-  }
-  .search div input {
-    height: 100%;
-    width: 95%;
-    padding: 5px;
-    background-color: transparent;
-    border: none;
-  }
-  .no-teacher {
-    width: 100%;
-    height: 55vh;
-    border-radius: 5px;
-    background-color: #fcfafa;
-    padding: 50px;
-    display: flex;
-    align-items: center;
-      justify-content: flex-end;
-      flex-direction: column;
-  }
-  .teacher-con {
-    width: 90%;
-    color: #4f4f4f;
-  }
-  .no-teacher div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .teacher {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  /*new student*/
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+}
+header > div {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  color: #4f4f4f;
+}
+header > div button {
+  background-color: #509cdb;
+  color: #ffffff;
+  font-weight: 550;
+  font-size: 16;
+  padding: 10px;
+  border: 1px solid #509cdb;
+  border-radius: 5px;
+}
+header > div div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header b {
+  color: #509cdb;
+}
+.search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+.search div {
+  background-color: #fcfafa;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+.search div span {
+  width: 10%;
+  text-align: center;
+}
+.search div input {
+  height: 100%;
+  width: 90%;
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+}
+.no-teacher {
+  width: 100%;
+  height: 55vh;
+  border-radius: 5px;
+  background-color: #fcfafa;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.teacher-con {
+  width: 90%;
+  color: #4f4f4f;
+}
+.no-teacher div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.teacher {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*new student*/
+.new-student {
+  background-color: #ffffff;
+  color: #4f4f4f;
+  padding: 50px;
+  width: 90%;
+}
+.new-student header select {
+  width: 200px;
+}
+.new-student div {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+.new-student section {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+.new-student section div {
+  width: 100%;
+}
+.new-student input {
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+  border: 1px solid #a7a7a7;
+  border-radius: 3px;
+}
+.new-student label {
+  color: #8a8a8a;
+}
+.new-student span {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  align-items: center;
+}
+.new-student select {
+  height: 40px;
+  width: 50%;
+  padding: 5px;
+  border: 1px solid #a7a7a7;
+  border-radius: 3px;
+}
+.new-student section option {
+  padding: 10px;
+  height: 40px;
+}
+.new-student button {
+  background-color: #509cdb;
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  border: 1px solid #509cdb;
+  width: 120px;
+  transition: all 600ms;
+}
+.new-student button:hover {
+  background-color: transparent;
+  color: #509cdb;
+}
+
+.all-teacher {
+  display: flex;
+  flex-direction: column;
+}
+.all-teacher ul {
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+  font-size: 13px;
+}
+.all-teacher li {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  gap: 5px;
+  padding: 5px;
+  text-align: start;
+}
+.list-item {
+  display: flex;
+}
+.list-head {
+  display: none;
+}
+.all-teacher li::before {
+  content: attr(data-name);
+  font-weight: 550;
+}
+.all-teacher li span {
+  background-color: goldenrod;
+  color: #ffffff;
+  font-size: 18;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: none;
+  font-weight: 550;
+  align-items: center;
+  justify-content: center;
+}
+.student-details {
+  background-color: #ffffff;
+  color: #4f4f4f;
+  padding: 20px;
+}
+.student-details div {
+  display: flex;
+  padding: 10px;
+  gap: 20px;
+  align-items: center;
+}
+.student-details div span {
+  background-color: goldenrod;
+  color: #ffffff;
+  font-size: 18;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  display: flex;
+  font-weight: 550;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+@media (min-width: 780px) {
   .new-student {
-    background-color: #ffffff;
-    color: #4f4f4f;
-    padding: 50px;
     width: 60%;
   }
-  .new-student header select{
-    width: 200px;
-  }
-  .new-student div{
-      display: flex;
-      flex-direction: column;
-      width: 90%;
-  }
-  .new-student section{
-      display: flex;
-      gap: 10px;
-      width: 100%;
-  }
-  .new-student section div{
-    width: 100%;
-  }
-  .new-student input{
-    width: 100%;
-    height: 40px;
-    padding: 5px;
-    border: 1px solid #a7a7a7;
-    border-radius: 3px;
-  }
-  .new-student label{
-    color: #8a8a8a;
-  }
-  .new-student span{
-    display: flex;
-    justify-content: space-between;
-    gap: 5px;
-    align-items: center;
-  }
-  .new-student select{
-    height: 40px;
-    width: 50%;
-    padding: 5px;
-    border: 1px solid #a7a7a7;
-    border-radius: 3px;
-  }
-  .new-student section option{
-    padding: 10px;
-    height: 40px;
-  }
-  .new-student button{
-    background-color: #509cdb;
-    color: #ffffff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    border: 1px solid #509cdb;
-    width: 120px;
-    transition: all 600ms;
-  }
-  .new-student button:hover{
-    background-color: transparent;
-    color: #509cdb;
-  }
-  
-  .all-teacher{
-    display: flex;
-    flex-direction: column;
-  }
-  .all-teacher ul{
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .all-teacher ul {
+    flex-direction: row;
     height: 50px;
-    list-style: none;
-    font-size: 13px;
   }
-  .all-teacher li{
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  .all-teacher li {
     width: 20%;
-    text-align: start;
+    justify-content: flex-start;
   }
-  .all-teacher li span{
-    background-color: goldenrod;
-    color: #ffffff;
-    font-size: 18;
-    height: 35px;
-    width: 35px;
-    border-radius: 50%;
+  .all-teacher li::before {
+    display: none;
+  }
+  .search section {
     display: flex;
-    font-weight: 550;
-    align-items: center;
-    justify-content: center;
   }
-  .student-details{
-    background-color: #ffffff;
-    color: #4f4f4f;
-    padding: 20px;
-  }
-  .student-details div{
+  .all-teacher li span {
     display: flex;
-    padding: 10px;
-    gap: 20px;
-    align-items: center;
   }
-  .student-details div span{
-    background-color: goldenrod;
-    color: #ffffff;
-    font-size: 18;
-    height: 70px;
-    width: 70px;
-    border-radius: 50%;
+  .list-head {
     display: flex;
-    font-weight: 550;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
   }
+}

@@ -6,7 +6,7 @@ import phone from "../../public/phone.png";
 function SecondSection() {
   return (
     <section className="second-section-con">
-      <div className="second-section">
+      <div className="second-section"  data-aos='fade-down'data-aos-duration='1500'>
         <div>
           <h1>About Us</h1>
           <br />
@@ -25,7 +25,7 @@ function SecondSection() {
             labore optio repellat!
           </p>
         </div>
-        <div className="second-section-img">
+        <div className="second-section-img" data-aos='fade-up-left'data-aos-duration='2000'>
           <img src={phone} alt="hand" />
         </div>
       </div>
