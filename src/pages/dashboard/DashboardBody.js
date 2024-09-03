@@ -10,36 +10,23 @@ function DashboardBody() {
         <div>
           <BsPersonAdd size={50} />
           <section>
-            <h1>Add Teachers to your school</h1>
+            <h1>Effortless Management</h1>
             <br />
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-              sapiente dolores nemo? Vitae laudantium, ipsam neque natus dolor
-              quod sunt debitis minus eligendi tenetur
+              Register and manage your school on our platform, add students and
+              teachers, and assign them secure login credentials.
             </p>
           </section>
         </div>
         <div>
           <BsPersonAdd size={50} />
           <section>
-            <h1>Add Students to your school</h1>
+            <h1>Customizable Billing</h1>
             <br />
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-              sapiente dolores nemo? Vitae laudantium, ipsam neque natus dolor
-              quod sunt debitis minus eligendi tenetur
-            </p>
-          </section>
-        </div>
-        <div>
-          <BsPersonAdd size={50} />
-          <section>
-            <h1>Add billing for Students</h1>
-            <br />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-              sapiente dolores nemo? Vitae laudantium, ipsam neque natus dolor
-              quod sunt debitis minus eligendi tenetur
+              Tailor your school’s billing processes to suit your needs, and
+              easily notify students and teachers about payments and other
+              important updates.
             </p>
           </section>
         </div>

@@ -8,24 +8,23 @@ function ThirdSection() {
   return (
     <section className="third-section-con">
       <div className="third-section">
-        <div data-aos='fade-up'data-aos-duration='1500'>
+        <div data-aos="fade-up" data-aos-duration="1500">
           <h1>
-            Work around very
-            <br /> talented people.
+            We make the connection 
           </h1>
-          <br/>
+          <br />
           <p>
-            with lots of unique block you can easily buils
-            <br /> a page easily without any code
+            our platform is designed to empower schools, teachers, and students
+           <br/> to focus on what truly matters
           </p>
           <br />
-          <br/>
-          <br/>
+          <br />
+          <br />
           <span>
             <img src={img1} alt="img of guy" />
           </span>
         </div>
-        <div data-aos='fade-up'data-aos-duration='2000'>
+        <div data-aos="fade-up" data-aos-duration="2000">
           <span>
             <img src={img2} alt="image ofstudent" />
           </span>

@@ -9,9 +9,10 @@ function FifthSection() {
         <h1>Pick up the best plan</h1>
         <br />
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sapiente
-          dolores nemo? Vitae laudantium, ipsam neque natus dolor quod sunt
-          debitis minus eligendi tenetur maiores eum
+          Choose the plan that best suits your school’s needs. Whether you’re a
+          small institution or a large educational organization, Statisda offers
+          flexible pricing options designed to help you manage your school
+          efficiently.
         </p>
       </section>
       <div className="fifth-section">
@@ -19,12 +20,11 @@ function FifthSection() {
           <header>
             <br />
             <br />
-            <span>standard</span>
+            <span>Basic Plan</span>
             <br />
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-              sapiente dolores nemo? Vitae laudantium, ipsam neque natus dolor
-              quod sunt
+              Perfect for small schools or startups looking to get started with
+              school management.
             </p>
             <br />
             <h1>
@@ -39,13 +39,13 @@ function FifthSection() {
             <br />
             <ul>
               <input type="checkbox" checked />
-              <label>For 1-10 people in a team</label>
+              <label>Manage up to 100 students</label>
               <br />
               <input type="checkbox" checked />
-              <label>For 1-10 people in a team</label>
+              <label>Basic student and teacher management</label>
               <br />
               <input type="checkbox" checked />
-              <label>For 1-10 people in a team</label>
+              <label>Upload results and study materials</label>
             </ul>
             <br />
             <button>Buy plan</button>
@@ -53,16 +53,15 @@ function FifthSection() {
             <br />
           </section>
         </div>
-        <div className="price-pro" style={{background:'#100f57'}}>
+        <div className="price-pro" style={{ background: "#100f57" }}>
           <header>
             <br />
             <br />
-            <span style={{background: '#ffffff'}}>standard</span>
+            <span style={{ background: "#ffffff" }}>Premium Plan</span>
             <br />
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-              sapiente dolores nemo? Vitae laudantium, ipsam neque natus dolor
-              quod sunt
+              Best suited for large schools or educational organizations with
+              complex needs and higher student volumes
             </p>
             <br />
             <h1>
@@ -77,13 +76,13 @@ function FifthSection() {
             <br />
             <ul>
               <input type="checkbox" checked />
-              <label>For 1-10 people in a team</label>
+              <label>Unlimited student management</label>
               <br />
               <input type="checkbox" checked />
-              <label>For 1-10 people in a team</label>
+              <label>Comprehensive teacher and staff management</label>
               <br />
               <input type="checkbox" checked />
-              <label>For 1-10 people in a team</label>
+              <label>Full customization of billing and payment systems</label>
             </ul>
             <br />
             <button>Buy plan</button>
@@ -95,12 +94,11 @@ function FifthSection() {
           <header>
             <br />
             <br />
-            <span>standard</span>
+            <span>Standard Plan</span>
             <br />
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-              sapiente dolores nemo? Vitae laudantium, ipsam neque natus dolor
-              quod sunt
+              Designed for growing schools that need more advanced features and
+              customization options.
             </p>
             <br />
             <h1>
@@ -115,13 +113,13 @@ function FifthSection() {
             <br />
             <ul>
               <input type="checkbox" checked />
-              <label>For 1-10 people in a team</label>
+              <label>Manage up to 500 students</label>
               <br />
               <input type="checkbox" checked />
-              <label>For 1-10 people in a team</label>
+              <label>Advanced student and teacher management</label>
               <br />
               <input type="checkbox" checked />
-              <label>For 1-10 people in a team</label>
+              <label>Customizable billing and payment tracking</label>
             </ul>
             <br />
             <button>Buy plan</button>
