@@ -90,8 +90,7 @@ function NewStudent({ newStudent, setNewStudent }) {
                 onChange={(e) => setStudentName(e.target.value)}
               />
               <section>
-                <div style={{ width: "50%" }}>
-                  <br />
+                <div >
                   <br />
                   <label id="email">Email Address</label>
                   <input
@@ -109,8 +108,7 @@ function NewStudent({ newStudent, setNewStudent }) {
                     placeholder="Enter student password"
                   />
                 </div>
-                <div style={{ width: "50%" }}>
-                  <br />
+                <div>
                   <br />
                   <br />
                   <span>

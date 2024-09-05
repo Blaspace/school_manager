@@ -88,12 +88,13 @@ header b {
 .new-student {
   background-color: #ffffff;
   color: #4f4f4f;
-  padding: 50px;
   width: 90%;
 }
-.new-student header select{
-  width: 200px;
+.new-student header{
+  flex-direction: column;
+  margin-bottom: 20px;
 }
+
 .new-student div{
     display: flex;
     flex-direction: column;
@@ -217,8 +218,12 @@ header b {
   font-size: 30px;
 }
 @media (min-width: 780px) {
+  .new-student header{
+  flex-direction: row;
+  }
 .new-student {
   width:60%;
+  padding: 40px;
 }
   .all-teacher ul{
     flex-direction: row;

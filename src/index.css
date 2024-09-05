@@ -8,6 +8,11 @@
 }
 body {
   background-color: #ffffff;
+  overflow-x: clip;
+}
+#root{
+  width: 100%;
+  overflow-x: clip;
 }
 .notification-box {
   padding: 20px;

@@ -26,7 +26,7 @@ function ProfileArea() {
           return res.json();
         }
       })
-      .then((data) => setTeacher({ ...teacher, image: data.logo }))
+      .then((data) => setTeacher({ ...teacher, image: data.image }))
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
   };

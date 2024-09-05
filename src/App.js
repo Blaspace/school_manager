@@ -58,7 +58,7 @@ function App() {
         <Route path="teacher/login" element={<TeacherLogin />} />
       </Route>
       {/*Protected route*/}
-      <Route element={<ProtectedRoute />}>
+      {/*<Route element={<ProtectedRoute />}>*/}
         <Route element={<StudentDashboardRoute />}>
           <Route element={<GetStudentSchool />}>
             <Route element={<GetCurrentStudent />}>
@@ -149,7 +149,7 @@ function App() {
             </Route>
           </Route>
         </Route>
-      </Route>
+      {/*</Route>*/}
     </Routes>
   );
 }

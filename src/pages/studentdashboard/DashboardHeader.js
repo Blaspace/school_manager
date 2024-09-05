@@ -1,23 +1,23 @@
 /** @format */
 
-import React, { useContext } from "react";
-import { FaUsers, FaMoneyBill, FaChalkboardTeacher,  } from "react-icons/fa";
-import SchoolContext from "../../context/SchoolContext";
+import React from "react";
+import { FaMoneyBill, FaChalkboardTeacher,  } from "react-icons/fa";
 import { GrDocument } from "react-icons/gr";
+import { useNavigate } from "react-router-dom";
 
 function DashboardHeader() {
-  const {student, teacher, billing} = useContext(SchoolContext)
+  const navigate = useNavigate()
   return ( 
     <div  className="dashboard-header">
-      <div>
+      <div onClick={()=>navigate('../../../student/dashboard/result')}>
         <FaChalkboardTeacher size={50} />
         <p>Check your result</p>
       </div>
-      <div>
+      <div onClick={()=>navigate('../../../student/dashboard/materials')}>
       <GrDocument size={50}/>
         <p>Get study materials</p>
       </div>
-      <div>
+      <div onClick={()=>navigate('../../../student/dashboard/billing')}>
         <FaMoneyBill size={50} />
         <p>Make payments</p>
       </div>

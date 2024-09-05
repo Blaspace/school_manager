@@ -53,6 +53,11 @@ function ProfileArea() {
           {student?.studentName?.slice(0, 1)}
           <small>
             <IoCameraSharp size={20} color="#ffffff" />
+            <input
+              type="file"
+              accept="image"
+              onChange={(e) => handleImageUpload(e.target.files)}
+            />
           </small>
         </span>
       )}

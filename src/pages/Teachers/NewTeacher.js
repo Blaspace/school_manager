@@ -93,8 +93,7 @@ function NewTeacher({ newTeacher, setNewTeacher }) {
                 onChange={(e) => setName(e.target.value)}
               />
               <section>
-                <div style={{ width: "50%" }}>
-                  <br />
+                <div >
                   <br />
                   <label id="email">Email Address</label>
                   <input
@@ -104,7 +103,6 @@ function NewTeacher({ newTeacher, setNewTeacher }) {
                     onChange={(e) => setEmail(e.target.value)}
                   />
                   <br />
-                  <br />
                   <label>Password</label>
                   <input
                     type="password"
@@ -112,9 +110,7 @@ function NewTeacher({ newTeacher, setNewTeacher }) {
                     placeholder="Enter teacher's password"
                   />
                 </div>
-                <div style={{ width: "50%" }}>
-                  <br />
-                  <br />
+                <div>
                   <br />
                   <span>
                     <select onChange={(e) => setGender(e.target.value)}>
@@ -133,7 +129,6 @@ function NewTeacher({ newTeacher, setNewTeacher }) {
                     </select>
                   </span>
                   <br />
-                  <br />
                   <label>Phone Number</label>
                   <input
                     type="tel"
@@ -145,7 +140,7 @@ function NewTeacher({ newTeacher, setNewTeacher }) {
               <br />
               <label>Teacher Subject</label>
               <input
-                type="tel"
+                type="text"
                 onChange={(e) => setTeacherSubject(e.target.value)}
                 placeholder="Enter teacher's subject"
               />

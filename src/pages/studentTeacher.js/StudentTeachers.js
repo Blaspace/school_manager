@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import ThirdNav from '../../components/ThirdNav'
-import StudentTeacherHeader from './StudentTeacherHeader'
+import StudentTeacherHeader from '../StudentBilling.js/StudentBillingHeader'
 import AllStudentTeacher from './AllStudentTeacher'
 import Search from './StudentTeacherFilter'
 import './studentTeacher.css'
@@ -13,7 +13,7 @@ function StudentTeachers() {
     <div className='teacher'>
         <ThirdNav toggle={toggle} setToggle={setToggle}/>
         <StudentDropdown toggle={toggle} setToggle={setToggle}/>
-        <StudentTeacherHeader/>
+        <StudentTeacherHeader text={'Your teachers'}/>
         <div className='teacher-con'>
         <Search setSearch={setSearch}/>
         <br/>

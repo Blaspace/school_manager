@@ -7,9 +7,6 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 function Search({ setSearch }) {
   return (
     <section className="search">
-      <section>
-        <span>Classes</span> <RiArrowDropDownLine size={20} />
-      </section>
       <div>
         <span>
           <BiSearch size={20} />

@@ -66,8 +66,8 @@ header b {
   padding: 50px;
   display: flex;
   align-items: center;
-    justify-content: flex-end;
-    flex-direction: column;
+  justify-content: flex-end;
+  flex-direction: column;
 }
 .teacher-con {
   width: 90%;
@@ -89,53 +89,50 @@ header b {
 .new-student {
   background-color: #ffffff;
   color: #4f4f4f;
-  padding: 50px;
   width: 90%;
 }
-.new-student header select{
-  width: 200px;
+.new-student div {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
 }
-.new-student div{
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-}
-.new-student section{
-    display: flex;
-    gap: 10px;
-    width: 100%;
-}
-.new-student section div{
+.new-student section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   width: 100%;
 }
-.new-student input{
+.new-student section div {
+  width: 100%;
+}
+.new-student input {
   width: 100%;
   height: 40px;
   padding: 5px;
   border: 1px solid #a7a7a7;
   border-radius: 3px;
 }
-.new-student label{
+.new-student label {
   color: #8a8a8a;
 }
-.new-student span{
+.new-student span {
   display: flex;
   justify-content: space-between;
   gap: 5px;
   align-items: center;
 }
-.new-student select{
+.new-student select {
   height: 40px;
   width: 50%;
   padding: 5px;
   border: 1px solid #a7a7a7;
   border-radius: 3px;
 }
-.new-student section option{
+.new-student section option {
   padding: 10px;
   height: 40px;
 }
-.new-student button{
+.new-student button {
   background-color: #509cdb;
   color: #ffffff;
   padding: 10px;
@@ -145,16 +142,16 @@ header b {
   width: 120px;
   transition: all 600ms;
 }
-.new-student button:hover{
+.new-student button:hover {
   background-color: transparent;
   color: #509cdb;
 }
 
-.all-teacher{
+.all-teacher {
   display: flex;
   flex-direction: column;
 }
-.all-teacher ul{
+.all-teacher ul {
   padding: 10px;
   justify-content: space-between;
   align-items: center;
@@ -162,7 +159,7 @@ header b {
   list-style: none;
   font-size: 13px;
 }
-.all-teacher li{
+.all-teacher li {
   display: flex;
   align-items: center;
   width: 100%;
@@ -171,17 +168,17 @@ header b {
   padding: 5px;
   text-align: start;
 }
-.list-item{
+.list-item {
   display: flex;
 }
-.list-head{
+.list-head {
   display: none;
 }
-.all-teacher li::before{
+.all-teacher li::before {
   content: attr(data-name);
   font-weight: 550;
 }
-.all-teacher li span{
+.all-teacher li span {
   background-color: goldenrod;
   color: #ffffff;
   font-size: 18;
@@ -193,18 +190,18 @@ header b {
   align-items: center;
   justify-content: center;
 }
-.student-details{
+.student-details {
   background-color: #ffffff;
   color: #4f4f4f;
   padding: 20px;
 }
-.student-details div{
+.student-details div {
   display: flex;
   padding: 10px;
   gap: 20px;
   align-items: center;
 }
-.student-details div span{
+.student-details div span {
   background-color: goldenrod;
   color: #ffffff;
   font-size: 18;
@@ -218,27 +215,33 @@ header b {
   font-size: 30px;
 }
 @media (min-width: 780px) {
-.new-student {
-  width:60%;
-}
-  .all-teacher ul{
+  .new-student {
+    width: 60%;
+  }
+  .new-student section div {
+    width: 50%;
+  }
+  .new-student section {
     flex-direction: row;
-  height: 50px;
   }
-  .all-teacher li{
-  width: 20%;
-  justify-content: flex-start;
+  .all-teacher ul {
+    flex-direction: row;
+    height: 50px;
   }
-  .all-teacher li::before{
+  .all-teacher li {
+    width: 20%;
+    justify-content: flex-start;
+  }
+  .all-teacher li::before {
     display: none;
   }
   .search section {
     display: flex;
   }
-.all-teacher li span{
-  display: flex;
-}
-.list-head{
-  display: flex;
-}
+  .all-teacher li span {
+    display: flex;
+  }
+  .list-head {
+    display: flex;
+  }
 }
