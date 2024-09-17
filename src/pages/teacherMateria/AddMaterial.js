@@ -9,30 +9,45 @@ function AddMaterial({ upload, setUpload }) {
   const [title, setTitle] = useState(null);
   const [description, setDescription] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [pdfE, setPdfE] = useState();
   const { setMaterial, material } = useContext(TeacherContext);
   const handleUpload = () => {
-    setUpload(null);
-    setLoading(true);
-    const formData = new FormData();
-    formData.append("logo", file[0]);
-    formData.append("description", description);
-    formData.append("title", title);
+    if (file){
+      setUpload(null);
+      setLoading(true);
+      const formData = new FormData();
+      formData.append("logo", file[0]);
+      formData.append("description", description);
+      formData.append("title", title);
 
-    fetch(`${process.env.REACT_APP_APIURL}/teacher/material`, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem("token")}`,
-      },
-      body: formData,
-    })
-      .then((res) => {
-        if (res.ok) {
-          return res.json();
-        }
+      fetch(`${process.env.REACT_APP_APIURL}/teacher/material`, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+        body: formData,
       })
-      .then((data) => setMaterial([...material, data]))
-      .catch((err) => console.log(err))
-      .finally(() => setLoading(false));
+        .then((res) => {
+          if (res.ok) {
+            return res.json();
+          }
+        })
+        .then((data) => setMaterial([...material, data]))
+        .catch((err) => console.log(err))
+        .finally(() => setLoading(false));
+    }
+  };
+  const handleChange = (e) => {
+
+    const formfile = e.target.files;
+    console.log(formfile[0].type);
+    if (formfile[0].type === "application/pdf") {
+      setFile(formfile);
+      setPdfE(null)
+    } else {
+      setPdfE("We only accept PDF format at this time");
+      setFile(null)
+    }
   };
   return (
     <>
@@ -56,10 +71,11 @@ function AddMaterial({ upload, setUpload }) {
                   opacity: "0",
                   height: "100%",
                 }}
-                onChange={(e) => setFile(e.target.files)}
+                onChange={(e) => handleChange(e)}
               />
               Select file
             </button>
+            <span style={{ color: "red" }}>{pdfE}</span>
             <p>{file && file[0]?.name}</p>
             <br />
             <input
@@ -75,13 +91,13 @@ function AddMaterial({ upload, setUpload }) {
             />
             <br />
             <br />
-            <div style={{display: 'flex', gap:"10px"}}>
-            <button className="btn" onClick={handleUpload}>
-              Upload
-            </button>
-            <button className="btn2" onClick={()=>setUpload(false)}>
-              Cancil
-            </button>
+            <div style={{ display: "flex", gap: "10px" }}>
+              <button className="btn" onClick={handleUpload}>
+                Upload
+              </button>
+              <button className="btn2" onClick={() => setUpload(false)}>
+                Cancil
+              </button>
             </div>
           </div>
         </div>

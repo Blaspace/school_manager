@@ -28,7 +28,7 @@ function AllMaterials() {
                 <b>{value.title}</b>
               </p>
               <p>{value.description.slice(0, 50)}</p>
-              <a href={`${process.env.REACT_APP_APIURL}/download/${value.file.slice(7,1000000)}`} download={value.title} style={{
+              <a href={value.file} download={value.title} style={{
                 color:"#2d88d4",
                 textDecoration: 'none'
               }}>
