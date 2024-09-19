@@ -51,10 +51,10 @@ function AddMaterial({ upload, setUpload }) {
   };
   return (
     <>
+            <Loading loading={loading} />
       {upload && (
         <div className="popup-con">
           <div className="add-material">
-            <Loading loading={loading} />
             <br />
             <h3>Add your course material in docs, PDF, docx format</h3>
             <br />
