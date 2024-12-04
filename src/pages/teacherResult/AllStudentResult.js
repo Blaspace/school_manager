@@ -6,10 +6,10 @@ import TeacherContext from "../../context/TeacherContext";
 function AllStudentResult({ setStudentId }) {
   const { student, result } = useContext(TeacherContext);
   return (
-    <div className="all-result">
-      <div>
-      <table>
-        <ul>
+    <div className="teacher">
+        <div className='teacher-con'>
+        <div className="all-teacher">
+          <ul className='list-head'>
           <li style={{ maxWidth: "50px", minWidth: "50px" }}>
             <b>.No</b>
           </li>
@@ -38,7 +38,10 @@ function AllStudentResult({ setStudentId }) {
         {student.map((value, index) => {
           const r = result?.filter((v) => v?.studentId === value?._id);
           return (
-            <ul>
+            <ul
+              style={{ backgroundColor: index % 2 === 0 ? "#e9f2fa" : "#ffffff" }}
+              className="list-item"
+            >
               <li style={{ maxWidth: "50px", minWidth: "50px" }}>
                 {index + 1}
               </li>
@@ -78,7 +81,7 @@ function AllStudentResult({ setStudentId }) {
             </ul>
           );
         })}
-      </table>
+      </div>
       </div>
     </div>
   );
