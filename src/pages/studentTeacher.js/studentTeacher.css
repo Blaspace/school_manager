@@ -161,6 +161,7 @@ header b {
   list-style: none;
   font-size: 13px;
 }
+
 .all-teacher li{
   display: flex;
   align-items: center;
@@ -191,6 +192,12 @@ header b {
   font-weight: 550;
   align-items: center;
   justify-content: center;
+}
+.all-teacher li span img{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
 }
 .student-details{
   background-color: #ffffff;

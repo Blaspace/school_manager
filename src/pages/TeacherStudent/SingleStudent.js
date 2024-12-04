@@ -18,7 +18,7 @@ function SingleStudent({ studentId, setStudentId, setNotify }) {
             <br />
             <div>
               <span>
-              <p>{newTeacher[0]?.studentName.slice(0,1)}</p>
+              {newTeacher[0]?.image ?  <img src={newTeacher?.image}/> :<p>{newTeacher[0]?.studentName.slice(0,1)}</p>}
               </span>
               <section>
               <p><b>{newTeacher[0]?.studentName}</b></p><br/>

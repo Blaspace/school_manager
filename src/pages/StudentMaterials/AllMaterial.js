@@ -10,7 +10,6 @@ function AllMaterials() {
     <div className="material-con">
       <div className="material">
         {material?.map((value) => {
-          
           return (
             <div className="material-single">
               <p>
@@ -18,7 +17,7 @@ function AllMaterials() {
               </p>
               <small>from: <b>{value.teacherName}</b></small>
               <p>{value.description.slice(0, 50)}</p>
-              <a href={value.file} download={value.title} style={{
+              <a href={`http://res.cloudinary.com/dl9dxseum/${value.file}`} download={value.title} style={{
                 color:"#2d88d4",
                 textDecoration: 'none'
               }}>
@@ -26,7 +25,7 @@ function AllMaterials() {
                 className="btn"
                 style={{ height: "30px", width: "70px", padding: 0 }}
               >
-                Download
+                Open
               </button>
               </a>
             </div>

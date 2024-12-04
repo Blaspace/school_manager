@@ -2,14 +2,15 @@
 
 import React, { useContext, useEffect, useState } from "react";
 import TeacherContext from "../../context/TeacherContext";
+import StudentContext from "../../context/StudentContext";
 
 function NotificationBox({func, userId, setUserId}) {
     const [message, setMessage] = useState()
     const [user, setUser] = useState([])
-    const {student} = useContext(TeacherContext)
+    const {teacher} = useContext(StudentContext)
 
     useEffect(()=>{
-      const i =student?.filter(v=> v?._id === userId)
+      const i =teacher?.filter(v=> v?._id === userId)
       setUser(i)
     },[userId])
   return (
@@ -18,7 +19,7 @@ function NotificationBox({func, userId, setUserId}) {
         <div className="popup-con">
           <div className="notification-box">
             <br />
-            <h3>Send a message to {user[0]?.studentName}</h3>
+            <h3>Send a message to {user[0]?.teacherName}</h3>
             <br />
             <textarea onChange={(e)=>setMessage(e.target.value)}/>
             <br />

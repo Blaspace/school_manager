@@ -41,41 +41,10 @@ const Login = () => {
         e.target.style.color = "#ffffff";
       });
   };
-  const handleDemo = (login, e) => {
-    e.target.innerText = "Loading...";
-    e.target.style.backgroundColor = "lightgrey";
-    e.target.style.color = "black";
-    fetch(`${process.env.REACT_APP_APIURL}/login`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(login),
-    })
-      .then((res) => {
-        if (res.ok) {
-          return res.json();
-        } else if (res.status === 401) {
-          alert("Wrong email/password");
-        } else {
-          alert("please try again");
-        }
-      })
-      .then((data) => {
-        localStorage.setItem("token", data.accessToken);
-        localStorage.setItem("user", "school");
-        navigate("../../dashboard");
-      })
-      .catch((err) => console.log(err))
-      .finally(() => {
-        e.target.innerText = "Login";
-        e.target.style.backgroundColor = "#2d88d4";
-        e.target.style.color = "#ffffff";
-      });
-  };
+  
   return (
     <>
-      <LoginPop pop={pop} setPop={setPop} func={handleDemo} />
+      <LoginPop pop={pop} setPop={setPop} />
       <div className="signup">
         <div className="signup-right">
           <h1>Welcome, login to your school account</h1>

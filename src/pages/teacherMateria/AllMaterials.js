@@ -21,7 +21,7 @@ function AllMaterials() {
           </span>
         </div>
         {material?.map((value) => {
-          
+          console.log(value)
           return (
             <div className="material-single">
               <p>

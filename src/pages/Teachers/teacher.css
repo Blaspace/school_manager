@@ -193,6 +193,12 @@ header b {
   align-items: center;
   justify-content: center;
 }
+.all-teacher li span img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
 .student-details{
   background-color: #ffffff;
   color: #4f4f4f;

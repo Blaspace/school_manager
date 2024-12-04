@@ -75,7 +75,9 @@ function AllStudentTeacher({ search }) {
                 className="list-item"
               >
                 <li data-name="Teacher Name">
-                  <span>{value?.teacherName?.slice(0, 1).toUpperCase()}</span>{" "}
+                  <span>
+                    {value?.image ? <img src={value.image}/> : value?.teacherName?.slice(0, 1).toUpperCase()}
+                    </span>{" "}
                   {value?.teacherName}
                 </li>
                 <li data-name="Subject">{value?.teacherSubject}</li>
