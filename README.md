@@ -1,44 +1,81 @@
-# School Management System Frontend
+# 🏫 EduManage - School Management System
 
-This is the **frontend** for the School Management System, built using **React**. It provides an intuitive and user-friendly interface for managing schools, students, teachers, billing, and more.
+![System Dashboard Preview](https://www.jamesdev.com.ng/static/media/schoolapp.0614b89bb75abe7d91cb.png)
 
----
+A comprehensive school management platform that streamlines administration, academics, billing, and communication for educational institutions.
 
-## Features
+## 🌟 Key Features
 
-- **Dashboard**: Overview of school activities, including statistics and key information.
-- **Student Management**: Add, update, and view student records.
-- **Teacher Management**: Manage teacher profiles and assignments.
-- **Billing System**: View and process payments and invoices.
-- **Results Management**: Students can view results uploaded by teachers.
-- **Study Materials**: Students can download study materials uploaded by teachers.
-- **Notifications**: Display real-time notifications for all users.
-- **Authentication**: Secure login for students, teachers, and administrators.
-- **Responsive Design**: Optimized for desktop and mobile devices.
+### 🏢 School Administration
+- **Multi-school registration** with admin dashboards
+- **Role-based access control** (Admin, Teacher, Student)
+- **Automated credential generation** for all users
 
----
+### 📊 Academic Management
+- **Teacher Portal**:
+  - Gradebook for result submission
+  - Study material distribution
+  - Student feedback system
+- **Student Portal**:
+  - Performance tracking
+  - Digital resource library
+  - Notification center
 
-## Tech Stack
+### 💰 Financial System
+- **Customizable billing cycles**
+- **Stripe integration** for payments
+- **Automated payment reminders**
+- **Financial reporting**
 
-- **Frontend Framework**: React
-- **State Management**: Redux (or Context API, if applicable)
-- **Styling**: CSS, SCSS, or styled-components
-- **API Integration**: Axios for making API calls to the backend
-- **Routing**: React Router
-- **Deployment**: (Add deployment details if applicable, e.g., Netlify, Vercel)
+### 📱 Communication Tools
+- Real-time messaging between stakeholders
+- Announcement broadcasting
+- Notification system
 
----
+## 🛠️ Technology Stack
 
-## Installation
+| Component       | Technologies Used                              |
+|-----------------|-----------------------------------------------|
+| **Frontend**    | React, CSS                                    |
+| **Backend**     | Node.js, Express.js, MongoDB (Mongoose)       |
+| **APIs**        | Stripe (Payments), Cloudinary (Media Storage)  |
+| **Middleware**  | Multer (File Upload), JWT Authentication      |
+| **DevOps**      | GitHub                                        |
+
+## 🎥 Demo & Links
+
+▶️ [Video Walkthrough](https://youtu.be/Tg00IUkiRsI?si=J7mgUczhnkN1_Lfv)  
+🌐 [Live Demo](https://school-manager-o95d.onrender.com/)  
+
+## 🚀 Installation
 
 ### Prerequisites
+- Node.js v16+
+- MongoDB v5+
+- Stripe API keys
+- Cloudinary account
 
-- Node.js and npm installed
-- Backend server running (Refer to the [backend repository](https://github.com/Blaspace/school_managment_server))
+### Setup Instructions
 
-### Steps
+1. **Frontend setup**:
+```bash
+git clone https://github.com/Blaspace/school_manager
+cd ./school_manager
+# Install dependencies
+npm install
+# Start development server
+npm start
+```
+1. **Backend setup**
+```bash
+git clone https://github.com/Blaspace/school_managment_server
+cd school_managment_server
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Blaspace/school_management_frontend.git
-   cd school_management_frontend
+# Install dependencies
+npm install
+# Start the server
+npm run dev
+```
+
+### 📄 License
+MIT License - see LICENSE for details
